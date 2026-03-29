@@ -30,13 +30,41 @@
             height: 45px;
             margin: 5px;
             font-size: 18px;
-  background-color: #6200ee;
-  color: white;
-  border: none;
-  border-radius: 8px;
+  
+  
+  
+  color: #0ff; /* Neon Cyan */
+  background: transparent;
+  padding: 15px 30px;
+  border: 2px solid #0ff;
+  border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+  transition: 0.3s;
+  
+  /* The "Glow" Layering */
+  text-shadow: 0 0 8px #0ff;
+  box-shadow: 0 0 10px #0ff, inset 0 0 10px #0ff;
+}
+
+button:hover {
+  background: #0ff;
+  color: #000;
+  /* Stronger glow on hover */
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+}
+
+/* Optional: Subtle Pulse Animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #0ff; }
+  50% { box-shadow: 0 0 25px #0ff; }
+  100% { box-shadow: 0 0 10px #0ff; }
+}
+
+.neon-button {
+  animation: pulse 2s infinite;
+}
+
 }
 
 button:hover {
